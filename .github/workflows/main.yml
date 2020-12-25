@@ -1,0 +1,21 @@
+on: [push]
+
+# this is based on
+# https://docs.github.com/en/free-pro-team@latest/actions/creating-actions/creating-a-docker-container-action
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    name: Test the action
+    steps:
+      # To use this repository's private action you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Action execution
+        uses: ./ # Uses an action in the root directory
+        id: execution
+
+      # Use the output from the `execution` step
+      - name: Show the result code
+        run: echo "The result code was ${{ steps.execution.outputs.result }}"

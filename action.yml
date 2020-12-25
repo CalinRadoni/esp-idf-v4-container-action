@@ -1,0 +1,14 @@
+name: 'ESP-IDF v4.x build'
+description: 'GitHub Action to build your ESP32 code using the official Docker container from Espressif.'
+
+branding:
+  icon: check
+  color: purple
+
+outputs:
+  result:
+    description: 'The result code'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
