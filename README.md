@@ -2,7 +2,7 @@
 
 GitHub Action to build your ESP32 code using the official Docker container from Espressif.
 
-From [espressif/idf tags](https://hub.docker.com/r/espressif/idf/tags) I will implement:
+From [espressif/idf tags](https://hub.docker.com/r/espressif/idf/tags) **I will** implement:
 
 - latest
 - v4.2 and release-v4.2
@@ -19,12 +19,14 @@ The exit code of `idf.py build` command.
 
 ## Example usage
 
-Use the tag
+Use the tag to select the desired version of the `espressif/idf` Docker container.
+For `espressif/idf:v4.1` use:
+
 ```yml
 uses: CalinRadoni/esp-idf-v4-container-action@v4.1
 ```
 
-To get display the exit code use:
+To display the exit code use:
 
 ```yml
 - name: Build the code
@@ -35,4 +37,10 @@ To get display the exit code use:
   run: echo "The exit code was ${{ steps.esp-idf-build.outputs.result }}"
 ```
 
-For a more complex usage, including the overriding of the entrypoint script see [ESP32BoardManager](https://github.com/CalinRadoni/ESP32BoardManager) repository.
+For more complex usage including:
+
+- the overriding of the entrypoint script
+- ESP-IDF components in external repositories
+- adding a badge in the README.md page
+
+see the [ESP32BoardManager](https://github.com/CalinRadoni/ESP32BoardManager) repository.
