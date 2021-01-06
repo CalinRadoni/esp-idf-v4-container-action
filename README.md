@@ -2,14 +2,11 @@
 
 GitHub Action to build your ESP32 code using the official Docker container from Espressif.
 
-From [espressif/idf tags](https://hub.docker.com/r/espressif/idf/tags) **I will** implement:
+From [espressif/idf tags](https://hub.docker.com/r/espressif/idf/tags) I have implemented:
 
 - latest
 - v4.2 and release-v4.2
 - v4.1 and release-v4.1
-- v4.0.2 and release-v4.0
-
-This is *work-in-progress* and only v4.1 is implemented by now !
 
 ## Outputs
 
